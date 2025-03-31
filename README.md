@@ -1,2 +1,2 @@
-# test_webproject
-for web project at WebDev class
+# webproject
+Web Design course project entitled - My blog

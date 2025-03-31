@@ -1,0 +1,478 @@
+
+body{
+    font-family: "Times New Roman", sans-serif;
+    background: #FAF1E6;
+    margin: 16px;
+    padding: 0;
+    justify-content: center;
+}
+
+/*about.html title header*/
+.maintitle span {
+    display: flex;
+    font-family: "Times New Roman", sans-serif;
+    font-size: 80px;
+    justify-content: center;
+    letter-spacing: 0.5rem;
+    background-color: #99BC85;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 20px;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeSlideIn 1.5s ease-out forwards;
+}
+/*animation for the title from aboutme.html page*/
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*my_blog.html title header*/
+.header_title {
+    transform: scale(0.5); /* Start smaller */
+    opacity: 0; /* Start invisible */
+    animation: growTitle 1.5s ease-out forwards;
+}
+/*animation*/
+@keyframes growTitle {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+
+}
+.navbar li{
+    margin: 0 15px;
+    list-style: none;
+    background-size: 16px 16px;
+}
+.navbar a{
+    display: inline-block;
+    padding: 16px 24px;
+    background-color: #99BC85;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.navbar a:hover{
+    background-color: darkolivegreen;
+    transform: scale(1.2);
+}
+
+.profileimg {
+    display: block;
+    margin: 30px; /* Centers the image horizontally */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid black;
+    box-shadow: 1px 0 100px yellowgreen;
+    transform: scale(0.2); /* Start smaller */
+    opacity: 0; /* Start invisible */
+    animation: growImage 1.5s ease-out forwards;
+}
+
+/* If you need to center it vertically as well */
+.aboutme_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@keyframes growImage {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.head{
+    padding-top: 50px;
+    padding-left: 10px;
+    letter-spacing: 0.5rem;
+    text-align: left;
+}
+.head ul{
+    list-style: none;
+}
+
+.box p{
+    letter-spacing: 0.1rem;
+    font-size: 18px;
+    border: #99BC85 solid 1px;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: left;
+}
+
+.list{
+    list-style: none;
+    word-break: auto-phrase;
+    letter-spacing: 0.1rem;
+    font-size: 18px;
+    border: #99BC85 solid 1px;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: left;
+    line-height: 2rem;
+}
+.sub {
+    list-style-type: none;
+    border: none;
+}
+
+.experience ul{
+    font-size: 18px;
+    letter-spacing: 0.1rem;
+    list-style: none;
+    text-align: left;
+    border: 1px solid #99BC85;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+.h2{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 10px;
+    text-align: left;
+    letter-spacing: 0.5rem;
+}
+
+.header_nav {
+    text-align: center;
+    padding: 20px;
+    background-color: #99BC85;
+    color: white;
+    border-radius: 15px;
+    margin-bottom : 20px;
+}
+
+/* Style for the main title */
+.header h1 span {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Pill menu container */
+.pill-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style for the menu list */
+.pill-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+/* Menu items */
+.pill-menu li {
+    position: relative;
+}
+
+/* Menu links */
+.pill-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #4A7C59;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px 15px;
+    border-radius: 50px;
+    width: 50px; /* Initially small */
+    overflow: hidden;
+    transition: width 0.3s ease-in-out, background 0.3s;
+}
+
+/* Icons */
+.pill-menu a i{
+    font-size: 22px;
+    width: 24px;
+    text-align: center;
+}
+
+/* Hide text initially */
+.pill-menu a span {
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Hover effect - expand and show text */
+.pill-menu a:hover {
+    width: 90px; /* Expand width */
+    background: bisque;
+    box-shadow: 1px 0 100px yellow;
+}
+
+.pill-menu a:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.my-blog{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: #3A7D44;
+    color: ivory;
+    border-radius: 15px;
+    text-align: center;
+
+    
+}
+.my-blog h2{
+    font-size: 40px;
+}
+.post {
+    text-align: center; /* centers inline elements like text */
+    margin: 0 auto; /* ccenters the article horizontally */
+    flex: 1 1 calc(50% - 20px);
+    max-width:  calc(50% - 20px);
+    box-sizing: border-box;
+}
+.subtitle {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.post_img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid black;
+    box-shadow: 1px 0 100px yellowgreen;
+}
+
+.footer p{
+    text-align: center;
+    padding: 10px 0;
+    font: italic 0.8rem Arial, sans-serif;
+    color: black;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+    max-width: 450px;  /* Adjust width */
+    width: 100%;
+    background: #99BC85;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+}
+
+/* Form Fields */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Radio & Checkbox Alignment */
+form input[type="radio"],
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background-color: #5c67f2;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3d47c7;
+}
+
+/* Center Form in Page */
+.main_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.header_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0;
+}
+.header_form h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header_form ul li{
+    list-style: none;
+}
+.header_form ul li a{
+    text-decoration: none;
+}
+
+.form_list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+.form_list li {
+    list-style: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideInButtons 0.8s ease-out forwards;
+}
+
+.form_list button {
+    background: #99BC85;
+    color: black;
+    border-radius: 20px;
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.form_list button:hover{
+    background-color: #4A7C59;
+    color: white;
+}
+
+.form_list li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.form_list li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.form_list li:nth-child(3) {
+    animation-delay: 0.6s;
+} /* Add more if needed */
+
+@keyframes slideInButtons {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*header form*/
+.header_form h1 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+    
+    .box {
+        width: 100%;
+    }
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .my-blog {
+        flex-direction: column; 
+    }
+    
+    .post {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
